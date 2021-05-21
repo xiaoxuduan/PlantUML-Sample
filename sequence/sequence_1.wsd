@@ -1,0 +1,41 @@
+@startuml
+header headerTest
+footer footerTest Page %page% / %lastpage%
+
+title titleTest
+
+actor actorA 
+participant participantA as PA 
+participant participantB as PB 
+participant participantC as PC 
+
+autonumber
+autoactivate on
+
+actorA -> PA : START 
+PA -> PB : hello
+PB -> PC : WOW
+PC --> PB : ASDF 
+
+alt altTest 
+    PA -> PB : AAA
+    PB --> PA : BBB
+else elseTest
+    PA -> PB : CCC
+    PB --> PA : DDD
+end 
+
+loop loopTest
+    PA -> PB : EEE
+end
+
+PB -> PB : SELF 
+note right : NOTE RIGTHT TEST
+
+PB --> PA : REFDSA
+note left : NOTE LEFT TEST
+
+PA --> actorA : end 
+
+' return success
+@enduml
