@@ -1,4 +1,7 @@
 @startuml
+autonumber
+autoactivate on
+
 header headerTest
 footer footerTest Page %page% / %lastpage%
 
@@ -8,9 +11,6 @@ actor actorA
 participant participantA as PA 
 participant participantB as PB 
 participant participantC as PC 
-
-autonumber
-autoactivate on
 
 actorA -> PA : START 
 PA -> PB : hello
